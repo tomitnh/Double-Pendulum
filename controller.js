@@ -30,12 +30,15 @@ function draw () {
 
 	line(0,0,x1,y1);
 	ellipse(x1,y1,m1,m1);
+
+	// reset current transformation matrix to the identity matrix
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
 }
 
 function animate () {
 
 	// clear canvas and draw new frame
-	// ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	draw();
 }
 
